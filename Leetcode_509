@@ -3,13 +3,13 @@ import numpy as np
 class Solution:
     def fib(self, N: int) -> int:
         
-   RECURSIVE
+         RECURSIVE
          if fib_ar[i] <= 1:
              return N
          else:
              return self.fib(N-1) + self.fib(N-2)
         
-   DYNAMIC - USING NUMPY        
+         DYNAMIC - USING NUMPY        
          if N <= 1:
              return N
          fib_ar = np.arange(N+1)
@@ -23,7 +23,7 @@ class Solution:
              sol = fib_ar[i]        
          return sol
 
-   DYNAMIC - WITH ARRAY
+         DYNAMIC - WITH ARRAY
          if N <= 1:
              return N
         
@@ -35,16 +35,16 @@ class Solution:
              sol = fib_ar[i]
          return sol
     
-   DYNAMIC - NO ARRAY
-        if N <= 1:
-            return N
+         DYNAMIC - NO ARRAY
+         if N <= 1:
+             return N
         
-        n_1 = 0
-        n_2 = 1
+         n_1 = 0
+         n_2 = 1
 
-        for i in range(2,N+1,1):
-            N_f = n_1 + n_2
-            n_1 = n_2
-            n_2 = N_f
+         for i in range(2,N+1,1):
+             N_f = n_1 + n_2
+             n_1 = n_2
+             n_2 = N_f
 
-        return N_f
+         return N_f
