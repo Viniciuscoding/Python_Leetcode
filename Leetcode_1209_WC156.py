@@ -14,12 +14,13 @@ Constraints:
 1 <= s.length <= 10^5
 2 <= k <= 10^4
 s only contains lower case English letters.
+
 """
 
 # SOLUTION
-
 class Solution:
     def removeDuplicates(self, s: str, k: int) -> str:
+        
         for char in s:
             s = s.replace(char*k, "")
         return s
