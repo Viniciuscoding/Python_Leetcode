@@ -22,13 +22,16 @@ The characters in J are distinct.
 
 class Solution:
     def numJewelsInStones(self, J: 'str', S: 'str') -> 'int':
-#        return sum(map(J.count, S)) -> one line solution
-         count = 0
-         for i in range(len(J)):
-             for j in range(len(S)):
-               if J[i] == S[j]:
-                 count += 1
-               else:
-                 continue
-
-         return count
+        count = 0
+        for charJ in J:
+            for charS in S:
+                if charJ == charS:
+                     count += 1
+                else:
+                     continue
+        return count
+       
+        # lee215 SOLUTION
+        # I improved lee215 solution
+        # jset = set(J) no need of set since J characters are all distinct
+        # return sum(char in J for char in S)
