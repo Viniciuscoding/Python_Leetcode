@@ -1,4 +1,4 @@
-/*
+"""
 Unique Morse Code Words
 
 International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, 
@@ -29,12 +29,33 @@ Note:
 The length of words will be at most 100.
 Each words[i] will have length in range [1, 12].
 words[i] will only consist of lowercase letters.
-
-*/
+"""
 
 class Solution:
     def uniqueMorseRepresentations(self, words: List[str]) -> int:
-
-        CODE = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--",
-             "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."]
+        
+        CODE = [".-", "-...", "-.-.", "-..", ".", 
+                "..-.", "--.", "....", "..", 
+                ".---", "-.-", ".-..", 
+                "--", "-.", "---", 
+                ".--.", "--.-", 
+                ".-.", "...", 
+                "-", "..-", 
+                "...-", 
+                ".--", "-..-", "-.--", "--.."]
+        
+        # SOLUTION 1
         return len({''.join(CODE[ord(n) - ord('a')] for n in w) for w in words})
+        
+        # SOLUTION 2
+        morse = ""
+        m_code = []
+        
+        for i1 in range(len(words)):
+            for i2 in range(len(words[i1])):
+                i3 =  ord(words[i1][i2]) - ord('a')
+                morse = morse + code[i3]
+            m_code.append(morse)
+            morse = ""
+        return len(set(m_code))
+    
