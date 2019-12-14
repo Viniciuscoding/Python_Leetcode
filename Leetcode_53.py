@@ -1,4 +1,6 @@
-/* NEEDS TO TRY AGAIN - COULD NOT SOLVE IT
+""" NEEDS TO TRY AGAIN - COULD NOT SOLVE IT
+Maximum Subarray
+
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
 Example:
@@ -9,9 +11,9 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 Follow up:
 
 If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
-*/
+"""
 
-#NOT MY SOLUTION
+# NOT MY SOLUTION
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         
