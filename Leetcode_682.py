@@ -1,4 +1,4 @@
-/* Baseball Game
+""" Baseball Game
 
 You're now a baseball game point recorder.
 
@@ -36,9 +36,9 @@ Round 7: You could get 9 + 5 = 14 points. The sum is 27.
 Note:
 The size of the input list will be between 1 and 1000.
 Every integer represented in the list will be between -30000 and 30000.
-*/
+"""
 
-MY ANSWER
+# MY ANSWER
 
 class Solution(object):
     def calPoints(self, ops):
