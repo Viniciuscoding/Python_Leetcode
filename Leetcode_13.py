@@ -61,7 +61,7 @@ class Solution:
                   "CM": 900,
                   "M":  1000}
         
-        // MY SOLUTION
+        # MY SOLUTION
         
         integer = 0
         for ro in range(len(s)-1,-1,-1):
@@ -79,7 +79,7 @@ class Solution:
             
         return integer
         
-        // SOLUTION by 
+        # SOLUTION by wenfengqiu
         res = 0
         for i in range(len(s) - 1):
             if roman[s[i]] < roman[s[i+1]]:
@@ -88,11 +88,13 @@ class Solution:
                 res += roman[s[i]]
         return res + roman[s[-1]]
         
-        // SOLUTION by 
-        z = 0
-        for i in range(0, len(s) - 1):
-            if roman[s[i]] < roman[s[i+1]]:
-                z -= roman[s[i]]
+        # SOLUTION by nhuthai08
+        prev = sum = 0
+        for i in s[::-1]:
+            curr = _dict[i]
+            if prev > curr:
+                sum -= curr
             else:
-                z += roman[s[i]]
-        return z + roman[s[-1]]
+                sum += curr
+            prev = curr
+        return sum
