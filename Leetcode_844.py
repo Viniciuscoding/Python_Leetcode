@@ -34,7 +34,7 @@ Follow up:
 Can you solve it in O(N) time and O(1) space?
 """
 
-#from functools import reduce
+from functools import reduce
 
 class Solution:
     def backspaceCompare(self, S: str, T: str) -> bool:
@@ -73,5 +73,3 @@ class Solution:
              return res
         
          return reduce(backspace, S, []) == reduce(backspace, T, [])
-
-
