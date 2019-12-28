@@ -25,25 +25,28 @@ text consists of lower case English letters only.
 
 class Solution:
     def maxNumberOfBalloons(self, text: str) -> int:
-    
-      lowest = min(text.count('b'),text.count('a'),text.count('n'),text.count('l')//2,text.count('o')//2)
-        
-      return lowest
+   
+      # SOLUTION by cenkay (It is faster than mine)  
+      return min(text.count('b'),
+                 text.count('a'),
+                 text.count('n'),
+                 text.count('l')//2,
+                 text.count('o')//2)
       
-      
+      # MY SOLUTION
       single = "balon"
-      count_arr = [0]*5
+      count_arr = [0]*(len(single))
         
       for i in range(len(text)):
-          if "b" == text[i]:
+          if single[0] == text[i]:
               count_arr[0] += 1
-          if "a" == text[i]
+          if single[1] == text[i]
               count_arr[1] += 1
-          if "l" == text[i]:
+          if single[2] == text[i]:
               count_arr[2] += 1
-          if "o" == text[i]:
+          if single[3] == text[i]:
               count_arr[3] += 1
-          if "n" == text[i]:
+          if single[4] == text[i]:
               count_arr[4] += 1
         
         # Reduce 'l' and 'o' to half because in a word it requires 2 of each       
