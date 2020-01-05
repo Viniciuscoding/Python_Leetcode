@@ -5,12 +5,10 @@ Given a text string and words (a list of strings), return all index pairs [i, j]
 is in the list of words.
 
 Example 1:
-
 Input: text = "thestoryofleetcodeandme", words = ["story","fleet","leetcode"]
 Output: [[3,7],[9,13],[10,17]]
 
 Example 2:
-
 Input: text = "ababa", words = ["aba","ab"]
 Output: [[0,1],[0,2],[2,3],[2,4]]
 Explanation: 
@@ -31,7 +29,7 @@ second coordinate).
 
 class Solution:
     def indexPairs(self, text: str, words: List[str]) -> List[List[int]]:
-        # COULD NOT SOLVE IT!!
+        # COULD NOT SOLVE IT!
 #         ls_words = []
 #         w = 0
                 
