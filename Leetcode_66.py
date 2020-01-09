@@ -27,3 +27,12 @@ class Solution:
         plusOneDigit = [int(x) for x in str(nums)]
         
         return plusOneDigit
+        
+        # SOLUTION by leetcode (fastest)
+        for i in range(len(digits)):
+            # ~ means 
+            if digits[~i] < 9:
+                digits[~i] += 1    
+                return digits
+            digits[~i] = 0
+        return [1] + [0] * len(digits)
