@@ -27,3 +27,12 @@ class Solution:
             back[i] = back[i] * (back[i-1] or 1)
 
         return max(front + back)
+
+# EXPLANATION
+
+# multiple subarrays from beginning to end in one array and multiply subarrays from end to beginning in another array.
+# This is becacuse if you have [-1,-2,-100] then subaeeay is [-1,2,-200] but the inverse array [-100,-2,-1] will yield
+# [-100,200,-200] since the smallest negative value becomes the largest when multiplied by the largest negative.
+# NOTE: make sure to start from index 1 in order to maintain the index 0 unchanged.
+# If in any of the multiplications there is a zero then reset the subarray value to 1 in order to start a new subarray.
+# Concatenate both array together and return the largest contigous array.
