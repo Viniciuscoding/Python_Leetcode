@@ -53,3 +53,11 @@ class Solution:
                 return False
         
         return True
+
+       
+ # EXPLANATION
+ 
+ #1. Create a dictionary out or order array with key the letter and index the value.
+ #2. Change the words' characters to the dictionary's respective values.
+ #3. Use zip() to check if every character in the first word is not greater than the following words characters.
+ #4. If all the words falls under the #3 if statement then return True.
