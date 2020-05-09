@@ -31,27 +31,26 @@ The substring with start index = 1 is "ba", which is an anagram of "ab".
 The substring with start index = 2 is "ab", which is an anagram of "ab".
 """
 
-class Solution(object):
-    def findAnagrams(self, s, p):
-
-        p_size = len(p)
-        s_list = list(s)
-        p_list = list(p)
-        p_list.sort()
-        ar = []
+# class Solution(object):
+#    def findAnagrams(self, s, p):
+# FIRST SOLUTION CAN'T PASS TIME LIMIT
+#         p_size = len(p)
+#         s_list = list(s)
+#         p_list = list(p)
+#         p_list.sort()
+#         ar = []
         
-        # FIRST SOLUTION CAN'T PASS TIME LIMIT
-        
-        for i in range(len(s) - p_size + 1):
-            rang = s_list[i:(i+p_size)]
-            rang.sort()
-            if rang == p_list:
-                ar.append(i)
+#         for i in range(len(s) - p_size + 1):
+#             rang = s_list[i:(i+p_size)]
+#             rang.sort()
+#             if rang == p_list:
+#                 ar.append(i)
             
-        return ar
+#         return ar
 
-        # SECOND SOLUTION PASSES TIME LIMIT
-        
+ # SECOND SOLUTION PASSES TIME LIMIT
+ class Solution(object):
+    def findAnagrams(self, s, p):
         pDic = collections.Counter(p)
         sDic = collections.Counter(s[:len(p)])
         
