@@ -85,7 +85,7 @@ class Solution(object):
 # 5. Check if each dictionary is the same. If they are, add beg to an empty array that was called "indexes". 
 # 6. Decrement the value of the character from the character in the string s whose index is equal to the character at beg index.
 # 7. Check if the character value of the character at beg index is equal to 0. If it is, pop that value from the dictionary.
-$ 8. Add the next value character at the end index and increment its value by 1 to the dictionary. 
+# 8. Add the next value character at the end index and increment its value by 1 to the dictionary. 
 # of the size o string lenght of p which we call the "end" index.
 # 9. Increment the beg and end by one each.
 # 10. Loop through it until end is greater than the length of s than return indexes.
