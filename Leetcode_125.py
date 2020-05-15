@@ -16,11 +16,19 @@ Output: false
 """
 
 class Solution(object):
+    # SOLUTION slower solution
     def isPalindrome(self, s):
         
         new_Pal = [c.lower() for c in s if c.isalnum()]
 
         return new_Pal == new_Pal[::-1]
+    
+    # SOLUTION fastest one
+    def isPalindrome(self, s):
+        s = s.lower()
+        s = re.sub("[^0-9a-zA-Z]+", "", s)
+        
+        return s == s[::-1]
         
 # EXPLANATION
 
