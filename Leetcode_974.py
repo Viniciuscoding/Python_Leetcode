@@ -18,7 +18,7 @@ Note:
 
 class Solution(object):
     def subarraysDivByK(self, A, K):
-        # MY SOLUTION - Brute Force
+        # MY SOLUTION - Brute Force (It fails Leetcode's time limit)
         s = len(A)
         beg, end = 0, 1
         brek = 1
@@ -47,7 +47,7 @@ class Solution(object):
         # 3. Return the count of combinations whose sum is divisible by K
         
         
-        # SOLUTION from Leetcode fastest
+        # SOLUTION from Leetcode fastest (Still trying to understand the maath behind)
         res, prefix = 0, 0
         count = [1] + [0] * (K-1)
         for a in A:
