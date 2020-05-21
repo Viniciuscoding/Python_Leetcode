@@ -47,7 +47,7 @@ class Solution(object):
         # 3. Return the count of combinations whose sum is divisible by K
         
         
-        # SOLUTION from Leetcode fastest (Still trying to understand the maath behind)
+        # SOLUTION from Leetcode fastest (Still trying to understand the math behind)
         res, prefix = 0, 0
         count = [1] + [0] * (K-1)
         for a in A:
