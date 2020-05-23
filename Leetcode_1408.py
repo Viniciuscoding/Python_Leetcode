@@ -39,7 +39,6 @@ class Solution(object):
         
         for w in words:
             for i in range(len(words)):
-                #print("{} == {} is {}".format(w, words[i], w in words[i]))
                 if w in words[i]:
                     count += 1
                 if count >= 2:
