@@ -33,6 +33,11 @@ class Solution(object):
         k = len(B[0])
         AB = [[0 for _ in range(k)] for _ in range(m)]
         
+        if A is None or B is None: return None
+        
+        if n != len(B):
+            raise("A's column size must be equal to B's row size.")    
+        
         # Pick up each row
         for i, rowA in enumerate(A):
 
