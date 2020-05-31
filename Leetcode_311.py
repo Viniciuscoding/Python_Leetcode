@@ -28,6 +28,7 @@ AB = | -1 0 3 | x | 0 0 0 | = | -7 0 3 |
 
 class Solution(object):
     def multiply(self, A, B):
+        # SOLUTION fastest
         m = len(A)
         n = len(A[0])
         k = len(B[0])
@@ -50,4 +51,19 @@ class Solution(object):
                         if elB != 0:
                             # Multiply each element and add them in their respective position
                             AB[i][j] += elA * elB
+        return AB
+      
+class Solution(object):
+    def multiply(self, A, B):      
+        # SOLUTION slower
+        rowA = len(A)
+        colA = len(A[0])
+        colB = len(B[0])
+        AB = [[0 for _ in range(colB)] for _ in range(rowA)]
+    
+        for m in range(rowA):
+            for n in range(colB):
+                for k in range(colA):
+                    if A[m][k] and B[k][n]:
+                        AB[m][n] += A[m][k] * B[k][n]
         return AB
