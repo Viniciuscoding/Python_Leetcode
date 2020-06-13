@@ -33,7 +33,7 @@ class Solution(object):
         
         arr = []
         
-        for i in range(len(nums)/2):
+        for i in range(n):
             arr.append(nums[i])
             arr.append(nums[n+i])
         return arr
