@@ -19,6 +19,7 @@ Note:
 
 1 <= words.length <= 50
 1 <= pattern.length = words[i].length <= 20
+"""
 
 # MY SOLUTION
 def findAndReplacePattern(self, words, pattern):
